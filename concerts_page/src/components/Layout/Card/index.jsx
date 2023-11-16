@@ -1,7 +1,11 @@
-import useFecth from '../useFecth'
+import { useFecth } from "../../hooks/useFecth"
+
 const Card = () => {
-    const { data,loading,error} = useFecth("https://kaoxdc.pythonanywhere.com/api-ficha2669739/Artist/") 
-  return (
+
+    const apiData= useFecth("https://kaoxdc.pythonanywhere.com/api-ficha2669739/Artist/") 
+    const artists = apiData.read()
+    console.log(artists)
+    return (
       <div className="app">
           <div className="card">
               <div className=' flex '>

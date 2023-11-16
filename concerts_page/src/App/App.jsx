@@ -8,7 +8,7 @@ import Biography from'../pages/Biography/index.jsx'
 const AppRoutes=()=>{
   let routes=useRoutes([
     {path: '/', element: <Artist/>},
-    {path: 'contacto', element: <Concert/>},
+    {path: 'concert', element: <Concert/>},
     {path: '/*', element: <Biography/>}
   ])
   return routes
