@@ -1,6 +1,5 @@
 import useFecth from '../useFecth'
-
-const Api = () => {
+const Card = () => {
     const { data,loading,error} = useFecth("https://kaoxdc.pythonanywhere.com/api-ficha2669739/Artist/") 
   return (
       <div className="app">
@@ -13,7 +12,7 @@ const Api = () => {
                           {user.name}
                           <div className='min-w-full min-h-full grid justify-center'>
                               <img src={user.photo} alt="" className='h-64 w-64 rounded-sm ' />
-                              <button className='rounded-md bg-red-300 h-7 w-24' > CONCERTS</button>
+                              <button  className='rounded-md bg-red-300 h-7 w-24' > CONCERTS</button>
                           </div>
                          
                       </div>))}
@@ -25,4 +24,4 @@ const Api = () => {
   )
 }
 
-export default Api
+export default Card
