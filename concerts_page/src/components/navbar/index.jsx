@@ -18,11 +18,12 @@ const Navbar = () => {
               <NavLink to='concert' className="min-w-min hover:bg-red-200 rounded-md hover:text-red-600">
              CONCERT
               </NavLink>
+              <NavLink to='/*' className="min-w-min hover:bg-red-200 rounded-md hover:text-red-600">
+                  BIOGRAPHY
+              </NavLink>
             
           </div>
-          <div className="search-bar py-6 ">
-              <input type="text" placeholder="busca tu artista favorito" className="rounded-md " />
-          </div>
+       
           <div className="flex min-w-min p-6">
           <img className="w-8  h-8 "
                   src={facebook} alt="" />
