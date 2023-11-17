@@ -1,16 +1,12 @@
-import { useFecth } from "../../hooks/useFecth"
+import {fetchData} from "../../hooks/fetchData.js"
 
-const Card = () => {
-
-    const apiData= useFecth("https://kaoxdc.pythonanywhere.com/api-ficha2669739/Artist/") 
-    const artists = apiData.read()
-    console.log(artists)
+const apidata=fetchData("https://kaoxdc.pythonanywhere.com/api-ficha2669739/Artist/")
+ export const Card = () => {
+    const data =apidata.read()
     return (
       <div className="app">
           <div className="card">
               <div className=' flex '>
-                  {error && <span>Error : {error}</span>}
-              {loading && <span>Loading...</span>}
                   <span className=' grid grid-rows-4 grid-flow-col gap-4'> {data?.map((user) => (
                       <div key={user.id} className='bg-stone-300 grid justify-items-stretch justify-center  h-96 w-80 rounded-sm m-1.5 mx-6'>
                           {user.name}
@@ -28,4 +24,4 @@ const Card = () => {
   )
 }
 
-export default Card
+

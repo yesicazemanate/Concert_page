@@ -1,4 +1,4 @@
-import Card from '../../components/Layout/Card/index.jsx'
+import {Card }from '../../components/Layout/Card/index.jsx'
 function Artist(){
 return(
     <Card/>
